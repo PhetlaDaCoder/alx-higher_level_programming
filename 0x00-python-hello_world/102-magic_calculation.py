@@ -1,2 +1,2 @@
-def magic_caculation(a, b):
+def magic_calculations(a, b):
     return (98 + a ** b)
