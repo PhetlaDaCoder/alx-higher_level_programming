@@ -8,7 +8,7 @@ if __name__ == "__main__":
     b = 5
 
     results = [
-        "{:d} = {:d} = {:d}".format(a, b, add(a, b)),
+        "{:d} + {:d} = {:d}".format(a, b, add(a, b)),
         "{:d} - {:d} = {:d}".format(a, b, sub(a, b)),
         "{:d} * {:d} = {:d}".format(a, b, mul(a, b)),
         "{:d} / {:d} = {:d}".format(a, b, div(a, b))
