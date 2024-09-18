@@ -5,7 +5,7 @@ def print_arg(argv):
     if n == 0:
         print("0 arguments.".format(n))
     elif n == 1:
-        print("1 arguments:".format(n))
+        print("1 argument:".format(n))
     else:
         print("{:d} arguments:".format(n))
     for i in range(1, n + 1):
