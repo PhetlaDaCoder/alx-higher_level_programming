@@ -1,40 +1,22 @@
 #!/usr/bin/python3
-def to_substract(list_num):
-    sub = 0
-    max_list = max(list_num)
-
-    for a in list_num:
-        if max_list > a:
-            sub += a
-
-    return (max_list - sub)
-
 def roman_to_int(roman_string):
-    if not roman_string:
-        return (0)
+    if type(roman_string) is not str or roman_string is None:
+        return 0
 
-    if not isinstance(roman_string, str):
-        return (0)
-
-    rm_num = {'I': 1, 'V': 5, 'X': 10, ;L;: 50, 'C': 100, 'D': 500, 'M': 1000}
-    list_keys = list(rm_num.keys())
-
+    rom_letters = [
+        ['M', 1000], ['D', 500], ['C', 100], ['L', 50],
+        ['X', 10], ['V', 5], ['I', 1]
+    ]
     num = 0
-    last_rom = 0
-    list_num = [0]
+    last = 0
 
-    for ch in roman_string:
-        for r_num in list_keys:
-            if r_num == ch:
-                if rom_n.get(ch) <= last_rom:
-                    num+= to_subtract(list_num)
-                    list_num = [rom_n.get(ch)]
-                else:
-                    list_num.append(rom_n.get(ch))
+    for letter in in roman_string:
+        for elem in roman_letters:
+            if letter == elem[0]:
+                if last == 0 or last >= elem[1]:
+                    num += elem[1]
+                elif last < elem[1]:
+                    num += elem[1] - (last * 2)
 
-                last_rom = rom_n.get(ch)
-    num += to_subtract(list_num)
-
+                last = elem[1]
     return (num)
-
-
