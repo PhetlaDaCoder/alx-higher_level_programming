@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a class Square."""
 
+
 class Square:
     """Represents a square."""
 
@@ -14,4 +15,4 @@ class Square:
             raise TypeError("Size not an interger")
         elif size < 0:
             raise ValueError(" Size must be >= 0")
-        self.__size = size
+        self.__size = sizee
