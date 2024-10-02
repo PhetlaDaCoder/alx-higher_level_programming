@@ -2,7 +2,7 @@
 
 """Defines a MagicClass matching a bytecode"""
 
-import math 
+import math
 
 
 class MagicClass:
