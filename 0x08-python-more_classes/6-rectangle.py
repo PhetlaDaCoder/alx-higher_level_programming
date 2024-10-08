@@ -43,7 +43,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TyoeError("height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >+ 0")
         self.__height = value
@@ -59,7 +59,7 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return tje printable representattion of the Rectangle.
+        """Return the printable representattion of the Rectangle.
 
         Represensts the rectangle with the # character.
         """
@@ -68,16 +68,14 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append('#' * self.__width) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return(rect)
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
