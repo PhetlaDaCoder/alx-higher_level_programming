@@ -6,7 +6,7 @@ class Rectangle:
     """Represent a rectangle.
 
     Attributes:
-        number_of-instances (int0: The number of Rectangle instance.
+        number_of_instances (int): The number of Rectangle instance.
     """
 
     number_of_instances = 0
@@ -45,7 +45,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >+ 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -64,14 +64,12 @@ class Rectangle:
         Represensts the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#' * self.__width) for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+            rect.append('#' * self.__width)
+        return "\n".join(rect)
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
