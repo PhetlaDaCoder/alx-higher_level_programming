@@ -5,7 +5,8 @@ MyList class function
 
 
 class MyList(list):
-    """a subclass of list"""
-    def print_sorted(self):
-        """prints a sorted list"""
+    """A subclass of list that can print itself sorted."""
+
+    def print_sorted(self):    
+        """Prints a sorted version on the list"""
         print(sorted(self))
