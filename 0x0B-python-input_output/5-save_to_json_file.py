@@ -4,7 +4,7 @@
 import json
 
 
-def from_json_string(my_str):
+def save_to_json_file(my_obj, filename):
     """Module save_to_json_file
     accepts Python object and sends JSON to file
     """
