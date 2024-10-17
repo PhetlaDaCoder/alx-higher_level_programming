@@ -9,7 +9,7 @@ class Student:
         """Initialize a new Student.
 
         Args:
-            first_name (str): TYe first name of the student.
+            first_name (str): The first name of the student.
             last_name (str): The last name of the student.
             age (int): The age of the student.
         """
@@ -27,7 +27,7 @@ class Student:
                 attrs (list): (Optional) The attributes to represent.
         """
         if isinstance(attrs, list) and
-        all(isinstance(ele, str) for ele in attrs):
+                all(isinstance(ele, str) for ele in attrs):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
 
