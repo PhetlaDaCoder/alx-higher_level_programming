@@ -24,6 +24,9 @@ class Base:
             id (int): The identity of the new Base.
         """
         if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
     @staticmethod
@@ -108,7 +111,7 @@ class Base:
         """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
-            if list_objs is None or list_objd == []:
+            if list_objs is None or list_objs == []:
                 csvfile.write("[]")
             else:
                 if cls.__name__ == "Rectangle":
@@ -116,7 +119,8 @@ class Base:
                 else:
                     fieldnames = ["id", "size", "x", "y"]
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                for obj in list_objd:
+                writer.writeheader()
+                for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
     @classmethod
