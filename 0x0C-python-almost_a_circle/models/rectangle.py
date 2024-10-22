@@ -11,7 +11,7 @@ class Rectangle(Base):
 
         Args:
             width (int): The width of the new Rectangle.
-            height (int): The height of tyhe new Rectangle.
+            height (int): The height of the new Rectangle.
             x (int): The x coordinate of the new Rectangle.
             y (int): The y coordinate of the new Rectangle.
             id (int): The identity of the new Rectangle.
@@ -34,7 +34,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if type(value) is not  int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -47,7 +47,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if type(value)is not  int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -60,7 +60,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if type(value) is not  int:
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -84,7 +84,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Prints the Rectangle using the '#' characte,"""
+        """Prints the Rectangle using the '#' character."""
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -107,7 +107,7 @@ class Rectangle(Base):
                 - 5th argument represents the y attribute
             **kwargs (dict): New key & value pairs of attributes.
         """
-        if args and len(args) != 0:
+        if args and len(args) is not 0:
             a = 0
             for arg in args:
                 if a == 0:
