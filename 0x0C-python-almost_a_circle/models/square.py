@@ -42,7 +42,7 @@ class Square(Rectangle):
             self.id = args[0] if len(args) > 0 else self.id
             self.size = args[1] if len(args) > 1 else self.size
             self.x = args[2] if len(args) > 2 else self.x
-            self.y = args[3] if len(args0 > 3 else self.y
+            self.y = args[3] if len(args) > 3 else self.y
         else:
             for k, v in kwargs.items():
                 if k == "id":
