@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script take the name of a state as an argument and lists all cities of that state, using database hbtn_0e_4_usa"""
+"""script take the name of a state as an argument
+and lists all cities of that state,
+using database hbtn_0e_4_usa"""
 
 
 import sys
